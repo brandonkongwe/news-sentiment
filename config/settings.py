@@ -97,8 +97,8 @@ CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 CELERY_BEAT_SCHEDULE = {
     'fetch-news-every-hour': {
         'task': 'news.tasks.fetch_news_task',
-        #'schedule': crontab(minute=0, hour='*'),
-        'schedule': crontab(minute='*/1'),
+        'schedule': crontab(minute=0, hour='*'),
+        #'schedule': crontab(minute='*/1'),
     },
 }
 

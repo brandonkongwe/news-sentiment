@@ -5,10 +5,10 @@ A Django web application that aggregates and analyzes sentiment from news articl
 ## Features
 
 - Real-time sentiment analysis of news articles (fetches data every hour)
-- Interactive dashboard with Chart.js visualization
+- Interactive dashboard with Chart.js visualization displaying daily sentiment trends
 - Filter articles by source and sentiment
-- Paginated article listing
-- Automated news fetching using Celery
+- Paginated article listing with clickable headlines linking to original sources
+- Automated and robust news fetching using Celery
 - Multi-source news aggregation
 - Sentiment classification (Positive, Neutral, Negative)
 

@@ -19,10 +19,11 @@ class Article(models.Model):
 
     source = models.ForeignKey(Source, on_delete=models.CASCADE)
     headline = models.TextField()
-    published_at = models.DateTimeField()
+    url = models.URLField(max_length=500, null=True, blank=True)
+    published_at = models.DateTimeField(db_index=True)
     country = models.CharField(max_length=100)
     sentiment_score = models.FloatField()
-    sentiment_label = models.CharField(max_length=20, choices=SENTIMENT_CHOICES)
+    sentiment_label = models.CharField(max_length=20, choices=SENTIMENT_CHOICES, db_index=True)
     keywords = models.TextField(blank=True, null=True)
 
     def __str__(self):
