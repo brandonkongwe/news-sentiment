@@ -30,8 +30,8 @@ services:
       - DEBUG=False
       - ALLOWED_HOSTS=localhost,127.0.0.1
       - DB_NAME=${DB_NAME}
-      - USER=${USER}
-      - PASSWORD=${PASSWORD}
+      - USER=${DB_USER}
+      - PASSWORD=${DB_PASSWORD}
       - HOST=db
       - PORT=3306
       - SECRET_KEY=${SECRET_KEY}
@@ -47,8 +47,8 @@ services:
       - .env
     environment:
       - DB_NAME=${DB_NAME}
-      - USER=${USER}
-      - PASSWORD=${PASSWORD}
+      - USER=${DB_USER}
+      - PASSWORD=${DB_PASSWORD}
       - HOST=db
       - PORT=3306
       - SECRET_KEY=${SECRET_KEY}
@@ -64,8 +64,8 @@ services:
       - .env
     environment:
       - DB_NAME=${DB_NAME}
-      - USER=${USER}
-      - PASSWORD=${PASSWORD}
+      - USER=${DB_USER}
+      - PASSWORD=${DB_PASSWORD}
       - HOST=db
       - PORT=3306
       - SECRET_KEY=${SECRET_KEY}
